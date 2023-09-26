@@ -11,6 +11,11 @@
     <nav class="navigation">
         <ul>
             <li><a href="../index.php">Accueil</a></li>
+            <li><a href="nouvelle_page.php">Créer une nouvelle page</a></li>
+            <li><a href="nouvel_article.php">Créer un nouvel article</a></li>
+            <li><a href="listeUtilisateurs.php">Gérer les comptes utilisateurs</a></li>
+    </ul>
+
             
         </ul>
     </nav>

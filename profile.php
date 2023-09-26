@@ -20,7 +20,7 @@ if (isset($_SESSION['avatar']) && !empty($_SESSION['avatar'])) {
 require('bdd/connect.php');
 
 $userId = $_SESSION['id'];
-$query = 'SELECT prenom, nom, mail, pseudo, avatar FROM users WHERE id = ?';
+$query = 'SELECT prenom, nom, mail, pseudo, avatar, niveau_compte FROM users WHERE id = ?';
 $statement = $bdd->prepare($query);
 $statement->execute([$userId]);
 $user = $statement->fetch(PDO::FETCH_ASSOC);
@@ -31,6 +31,7 @@ echo "<p>Prénom: " . $user['prenom'] . "</p>";
 echo "<p>Nom: " . $user['nom'] . "</p>";
 echo "<p>Email: " . $user['mail'] . "</p>";
 echo "<p>Pseudo: " . $user['pseudo'] . "</p>";
+echo "<p>Role: " . $user['niveau_compte'] . "</p>";
 
 
 

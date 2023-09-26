@@ -46,14 +46,7 @@ if (!isset($_SESSION['id']) || $_SESSION['niveau_compte'] !== 'admin') {
         ?>
     <h1>Page d'administration</h1>
     
-    <!-- Fonctionnalités pour l'administrateur -->
-    <ul>
-        <li><a href="nouvelle_page.php">Créer une nouvelle page</a></li>
-        <li><a href="nouvel_article.php">Créer un nouvel article</a></li>
-        <li><a href="listeUtilisateurs.php">Gérer les comptes utilisateurs</a></li>
-    </ul>
-
-    <!-- Afficher les derniers articles, pages et utilisateurs -->
+    
     
     
     <!-- Déconnexion de l'administrateur -->
