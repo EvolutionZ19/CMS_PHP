@@ -1,3 +1,6 @@
+
+<link rel="stylesheet" href="css/connAdmin.css">
+
 <?php
 // Démarrer la session
 session_start();

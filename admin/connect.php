@@ -37,6 +37,7 @@ if (!isset($_SESSION['id']) || $_SESSION['niveau_compte'] !== 'admin') {
 <html>
 <head>
     <title>Page d'administration</title>
+    
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
 </head>

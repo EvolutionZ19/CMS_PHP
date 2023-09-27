@@ -1,4 +1,5 @@
 <?php
+// Démarrer la session
 session_start();
 
 // Vérifiez si l'utilisateur est connecté
@@ -7,6 +8,28 @@ if (!isset($_SESSION['id'])) {
     exit();
 }
 
+// suppresion du compte
+if (isset($_POST['pseudo'])) {
+
+    require('../bdd/connect.php');
+
+    $pseudo = htmlspecialchars($_POST['pseudo'], ENT_QUOTES, 'UTF-8');
+
+    // Vérifiez si le pseudo est disponible
+    $req = $bdd->prepare('SELECT * FROM users WHERE pseudo = ?');
+    $req->execute([$pseudo]);
+    $user = $req->fetch();
+
+    if ($user) {
+
+        $req = $bdd->prepare('DELETE FROM users WHERE pseudo = ?');
+        $req->execute([$pseudo]);
+        header('Location: profile.php');
+        exit();
+    } else {
+        echo "Ce pseudo n'existe pas";
+    }
+}
 
 // Incluez le fichier header.php
 include('base/header.php');
@@ -46,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $newPrenom = $_POST['prenom'];
     $newNom = $_POST['nom'];
     $newEmail = htmlspecialchars($_POST['newEmail'], ENT_QUOTES, 'UTF-8');
-    $newPassword = $_POST['newPassword']; // Vous pouvez ajouter des validations ici si nécessaire
+    $newPassword = $_POST['newPassword']; 
 
     // Mettez à jour le prénom si un nouveau prénom est saisi
     if (!empty($newPrenom)) {
@@ -138,6 +161,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 
+
+
+
+
+
+
+
+
     // Affichez un message de confirmation
     echo "<p>Les modifications ont été enregistrées avec succès.</p>";
 }
@@ -164,8 +195,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <input type="submit" value="Enregistrer les modifications">
 </form>
 
+
+<!--  bouton de suppresion -->
+<form action="profile.php" method="post">
+    <label for="pseudo">Pseudo</label>
+    <input type="text" name="pseudo" id="pseudo" required>
+    <br>
+    <input type="submit" value="Supprimer">
+</form>
+
 <!--  bouton de déconnexion -->
 <a href="logout.php">Déconnexion</a>
+
+
+
+
 
 <?php
 // Incluez le fichier footer.php
