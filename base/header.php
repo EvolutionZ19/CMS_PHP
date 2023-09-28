@@ -12,7 +12,7 @@
         <ul>
             <li><a href="index.php">Accueil</a></li>
             <li><a href="pages.php">Pages</a></li>
-            <li><a href="articles.php">Articles</a></li>
+            <li><a href="articles.php">Derniers articles</a></li>
             <li><a href="inscription.php">Inscription</a></li>
             <li><a href="connexion.php">Connexion</a></li>
             <li><a href="profile.php">Profil</a></li>

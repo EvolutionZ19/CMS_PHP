@@ -1,10 +1,12 @@
 <?php
 
-
 if (isset($_SESSION['id'])) {
     header('Location: profile.php');
     exit();
 }
+
+// Inclure le fichier de configuration de la base de données
+require_once('bdd/connect.php');
 
 session_start();
 
