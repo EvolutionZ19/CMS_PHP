@@ -10,11 +10,11 @@ $req->execute(['publie', 1, 2, 3]);
 $pages = $req->fetchAll(PDO::FETCH_ASSOC);
 foreach ($pages as $page) {
     echo "<a href='page.php?id=" . $page['id'] . "'>";
-    echo "<li>Titre: " . ($page['titre']) . "</li>";
+    echo "<li>" . ($page['titre']) . "</li>";
     echo "</a>";
     
     echo "<li>Image: <img src='admin/images/" . htmlspecialchars($page['image']) . "' width='100' height='100' alt=''></li>";
-    echo "<li>Contenu: " . ($page['contenu']) . "</li>";
+    echo "<li> " . ($page['contenu']) . "</li>";
     echo "<li>Date: " . ($page['date']) . "</li>";
    
     echo "<hr>"; 

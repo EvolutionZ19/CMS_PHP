@@ -56,7 +56,7 @@ $pages = $requete->fetchAll(PDO::FETCH_ASSOC);
                         <?php foreach ($pages as $page): ?>
                             <tr>
                                 <td><?php echo $page['titre']; ?></td>
-                                <td><img src="<?php echo $page['image']; ?>" width="100" height="100" alt=""></td>
+                                <td><img src="images/<?php echo $page['image']; ?>" width="100" height="100" alt=""></td>
                                 <td><?php echo $page['contenu']; ?></td>
                                 <td><?php echo $page['date']; ?></td>
                                 <td><?php echo $page['statut_publication']; ?></td>

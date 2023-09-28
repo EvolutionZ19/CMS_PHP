@@ -45,7 +45,7 @@ if (!isset($_SESSION['id']) || $_SESSION['niveau_compte'] !== 'admin') {
             echo "<li>Email: " . htmlspecialchars($result['mail']) . "</li>";
             echo "<li>pseudo: " . htmlspecialchars($result['pseudo']) . "</li>";
             echo "<li>niveau_compte: " . htmlspecialchars($result['niveau_compte']) . "</li>";
-            echo "<li>avatar: <img src='" . htmlspecialchars($result['avatar']) . "' width='100' height='100' alt=''></li>";
+            echo "<li>avatar: <img src='../avatar" . htmlspecialchars($result['avatar']) . "' width='100' height='100' alt=''></li>";
             echo "<hr>"; // saut de ligne 
         }
     } catch (PDOException $e) {

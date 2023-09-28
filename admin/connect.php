@@ -21,7 +21,7 @@ function afficherDerniersArticles($bdd) {
     echo "<h2>5 derniers articles créés</h2>";
     foreach ($results as $result) {
         echo "<li>Titre: " . htmlspecialchars($result['titre']) . "</li>";
-        echo "<li>Image: <img src='" . htmlspecialchars($result['image']) . "' width='100' height='100' alt=''></li>";
+        echo "<li>Image: <img src='images/" . htmlspecialchars($result['image']) . "' width='100' height='100' alt=''></li>";
         echo "<li>Contenu: " . htmlspecialchars($result['contenu']) . "</li>";
         echo "<li>Date: " . htmlspecialchars($result['date']) . "</li>";
         echo "<li>Statut: " . htmlspecialchars($result['statut_publication']) . "</li>";
@@ -39,7 +39,7 @@ function afficherDernieresPages($bdd) {
     echo "<h2>5 dernières pages créées</h2>";
     foreach ($results as $result) {
         echo "<li>Titre: " . htmlspecialchars($result['titre']) . "</li>";
-        echo "<li>Image: <img src='" . htmlspecialchars($result['image']) . "' width='100' height='100' alt=''></li>";
+        echo "<li>Image: <img src='images/" . htmlspecialchars($result['image']) . "' width='100' height='100' alt=''></li>";
         echo "<li>Contenu: " . htmlspecialchars($result['contenu']) . "</li>";
         echo "<li>Date: " . htmlspecialchars($result['date']) . "</li>";
         echo "<li>Statut: " . htmlspecialchars($result['statut_publication']) . "</li>";
@@ -60,7 +60,7 @@ function afficherDerniersUtilisateurs($bdd) {
         echo "<li>Email: " . htmlspecialchars($result['mail']) . "</li>";
         echo "<li>Pseudo: " . htmlspecialchars($result['pseudo']) . "</li>";
         echo "<li>Niveau de compte: " . htmlspecialchars($result['niveau_compte']) . "</li>";
-        echo "<li>Avatar: <img src='" . htmlspecialchars($result['avatar']) . "' width='100' height='100' alt=''></li>";
+        echo "<li>Avatar: <img src='../" . htmlspecialchars($result['avatar']) . "' width='100' height='100' alt=''></li>";
         echo "<hr>"; // saut de ligne 
     }
 }

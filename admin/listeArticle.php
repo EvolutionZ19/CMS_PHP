@@ -43,7 +43,7 @@
                         <?php foreach ($articles as $article): ?>
                             <tr>
                                 <td><?php echo $article['titre']; ?></td>
-                                <td><img src="<?php echo $article['image']; ?>" width="100" height="100" alt=""></td>
+                                <td><img src="images/<?php echo $article['image']; ?>" width="100" height="100" alt=""></td>
                                 <td><?php echo $article['contenu']; ?></td>
                                 <td><?php echo $article['date']; ?></td>
                                 <td><?php echo $article['categorie_id']; ?></td>

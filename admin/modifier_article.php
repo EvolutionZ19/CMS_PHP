@@ -70,7 +70,7 @@ include_once('./base/header.php');
 <?php
 // Afficher l'article qui a été sélectionné
 echo "<h1>" . htmlspecialchars($article['titre']) . "</h1>";
-echo "<img src='" . htmlspecialchars($article['image']) . "' width='100' height='100' alt=''>";
+echo "<img src='images/" . htmlspecialchars($article['image']) . "' width='100' height='100' alt=''>";
 echo "<p>" . htmlspecialchars($article['contenu']) . "</p>";
 echo "<p>" . htmlspecialchars($article['date']) . "</p>";
 echo "<p>" . htmlspecialchars($article['statut_publication']) . "</p>";

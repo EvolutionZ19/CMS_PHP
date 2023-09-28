@@ -1,5 +1,11 @@
 <?php
 require_once('../bdd/connect.php');
+// Vérifier si l'administrateur est connecté
+if (!isset($_SESSION['id']) || $_SESSION['niveau_compte'] !== 'admin') {
+    // Rediriger vers la page de connexion de l'administrateur si l'administrateur n'est pas connecté
+    header('Location: connexion.php');
+    exit();
+}
 
 // Récupérer l'identifiant de la page à supprimer
 $id = $_GET['id'];

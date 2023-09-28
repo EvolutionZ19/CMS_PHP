@@ -70,7 +70,7 @@ include_once('./base/header.php');
 <?php
 // Afficher la page qui a été sélectionné
 echo "<h1>" . htmlspecialchars($page['titre']) . "</h1>";
-echo "<img src='" . htmlspecialchars($page['image']) . "' width='100' height='100' alt=''>";
+echo "<img src='images/" . htmlspecialchars($page['image']) . "' width='100' height='100' alt=''>";
 echo "<p>" . htmlspecialchars($page['contenu']) . "</p>";
 echo "<p>" . htmlspecialchars($page['date']) . "</p>";
 echo "<p>" . htmlspecialchars($page['statut_publication']) . "</p>";
